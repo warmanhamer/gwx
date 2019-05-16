@@ -1,0 +1,98 @@
+@import "./libs/_minix.scss";
+@import "./libs/common.scss";
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    header {
+        width: 100%;
+        height: pxTorem(50px);
+        @include box_flex;
+        @include align;
+        padding: 0 pxTorem(10px);
+        @include sizing;
+        i,
+        h3 {
+            font-weight: bold;
+            font-size: pxTorem(20px);
+        }
+    }
+    section {
+        width: 100%;
+        @include flex;
+        @include box_flex;
+        @include direction(column);
+        .nav {
+            width: 100%;
+            height: pxTorem(30px);
+            @include box_flex;
+            @include align;
+            @include flex_shrink(0);
+            p {
+                @include flex;
+                height: 100%;
+                @include box_flex;
+                @include justify;
+                @include align;
+            }
+        }
+        .main {
+            width: 100%;
+            @include flex;
+            @include box_flex;
+            @include direction(column);
+            @include flex_shrink(0);
+            overflow-y: auto;
+            li {
+                width: 100%;
+                @include box_flex;
+                padding: pxTorem(10px);
+                background: rgb(189, 180, 180);
+                box-sizing: border-box;
+                dt {
+                    @include flex;
+                    border-radius: 15px 0 0 15px;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                dd {
+                    @include flex;
+                    border-radius: 0 15px 15px 0;
+                    background: #fff;
+                    @include box_flex;
+                    @include direction(column);
+                    padding: pxTorem(10px);
+                    h4 {
+                        font-size: pxTorem(20px);
+                    }
+                    p {
+                        font-size: pxTorem(15px);
+                    }
+                    b.b {
+                        width: 35%;
+                        @include box_flex;
+                        border: 1px solid orangered;
+                        color: orangered;
+                        font-size: 80%;
+                        padding: pxTorem(2px);
+                        @include justify;
+                        align-content: center;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

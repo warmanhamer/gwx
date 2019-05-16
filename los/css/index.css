@@ -1,0 +1,35 @@
+@import "./_minix.scss";
+@import "./common.scss";
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+.wrap header {
+    width: 100%;
+    height: pxTorem(50px);
+    @include box_flex;
+    @include align;
+    padding: 0 pxTorem(10px);
+    @include sizing;
+}
+
+.wrap i,
+.wrap h3 {
+    font-weight: bold;
+    font-size: pxTorem(20px);
+}
+
+.wrap section {
+    width: 100%;
+}
